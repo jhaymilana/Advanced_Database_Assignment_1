@@ -5,6 +5,8 @@ namespace WebApplication2.Models
     public class Laptop
     {
         public Guid Id { get; set; }
+        public Guid Number { get; set; }
+
 
         private string _model;
         
@@ -41,6 +43,7 @@ namespace WebApplication2.Models
         public Brand Brand { get; set; }
         public Guid StoreId { get; set; }
         public int Quantity { get; set; }
+
     }
 
     public enum LaptopCondition

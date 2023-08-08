@@ -6,14 +6,17 @@
         public Guid Id { get; set; }
         public string StreetName { get; set; }
         public string StreetNumber { get; set; }
+
+        private CanadianProvince _province;
+
         public CanadianProvince Province
         {
-            get { return Province; }
+            get { return _province; }
             set
             {
                 if (Enum.IsDefined(typeof(CanadianProvince), value))
                 {
-                    Province = value;
+                    _province = value;
                 }
                 else
                 {
